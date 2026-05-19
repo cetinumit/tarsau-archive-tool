@@ -1,16 +1,7 @@
-#ifndef ARCHIVE_H
-#define ARCHIVE_H
+#ifndef EXTRACT_H
+#define EXTRACT_H
 
-#include <sys/types.h>
+/* --- Çıkarma Fonksiyon Prototipleri --- */
+void extract_archive(const char *archive_filename, const char *target_dir);
 
-/* --- Veri Yapilari --- */
-struct FileInfo {
-    char filename[256];
-    mode_t permissions;
-    off_t size;
-};
-
-/* --- Arşivleme Fonksiyon Prototipleri --- */
-void create_archive(const char *output_filename, char **input_files, int file_count);
-
-#endif // ARCHIVE_H
+#endif // EXTRACT_H
